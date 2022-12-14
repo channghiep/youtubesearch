@@ -121,7 +121,7 @@ export default function App() {
   return (
     <div className="grid grid-cols-5 font-sans text-xs font-medium h-screen">
       {/* <div className="bg-neutral-200 relative"> */}
-      <div className={`bg-neutral-200 relative ${showSearch ? "" : "hidden"}`}>
+      <div className={`bg-neutral-200 transition duration-150 ease-out ${showSearch ? "relative" : "absolute -left-full"}`}>
         {/* Search Section */}
         <div className="block text-center">
           <form onSubmit={handleSubmit} className="inline-flex justify-between mt-5 rounded-md bg-gray-50 text-[0.8125rem] font-medium leading-5 shadow-sm w-5/6">
@@ -285,7 +285,7 @@ export default function App() {
             </div>
 
       </div>
-      <div className={`${showSearch ? "col-span-4 bg-neutral-100 flex justify-center items-center transition ease-in-out" : "col-span-5 transition ease-in-out"}`}>
+      <div className={`transition ease-in-out ${showSearch ? "col-span-4 bg-neutral-100 flex justify-center items-center " : "col-span-5"}`}>
         {showSearch 
           ? 
             null
