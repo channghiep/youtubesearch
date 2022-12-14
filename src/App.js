@@ -2,8 +2,10 @@ import React, { useState, useEffect, useCallback } from "react";
 import "./App.css";
 import axios from "axios";
 
-const API_KEY = process.env.REACT_APP_API_KEY;
-const API_URL = process.env.REACT_APP_API_URL;
+// const API_KEY = process.env.REACT_APP_API_KEY;
+// const API_URL = process.env.REACT_APP_API_URL;3
+const API_KEY = "AIzaSyBzw3zJ57vaCtxzMCSHZ0ibJkPEggCh-dA";
+const API_URL = "https://www.googleapis.com/youtube/v3/search";
 export default function App() {
   const [searchTerm, setSearchTerm] = useState("");
   const [videos, setVideos] = useState([]);
