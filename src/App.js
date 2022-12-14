@@ -278,7 +278,7 @@ export default function App() {
           }
             
             
-            <div className="absolute top-1/2 right-1 ml-10 w-8 h-16 rounded-tl-full rounded-bl-full flex items-center justify-center bg-gray-200 shadow-lg ring-1 ring-white z-40" onClick={() => setShowSearch(false)}>
+            <div className="absolute top-1/2 right-0 ml-10 w-8 h-16 rounded-tl-full rounded-bl-full flex items-center justify-center bg-gray-200 shadow-lg ring-1 ring-white z-40" onClick={() => setShowSearch(false)}>
               <svg className="h-5 w-5" x-description="Heroicon name: mini/chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                 <path fillRule="evenodd" d="M12.79 5.23a.75.75 0 01-.02 1.06L8.832 10l3.938 3.71a.75.75 0 11-1.04 1.08l-4.5-4.25a.75.75 0 010-1.08l4.5-4.25a.75.75 0 011.06.02z" clipRule="evenodd"></path>
               </svg> 
