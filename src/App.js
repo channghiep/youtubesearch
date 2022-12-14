@@ -7,7 +7,7 @@ const API_URL = process.env.REACT_APP_API_URL;
 export default function App() {
   const [searchTerm, setSearchTerm] = useState("");
   const [videos, setVideos] = useState([]);
-  const [selectedVideos, setSelectedVideo] = useState([]);
+  const [selectedVideos, setSelectedVideo] = useState(JSON.parse(localStorage.getItem("savedData")) || []);
   const [showModal, setShowModal] = useState(false);
   const [playVideo, setPlayVideo] = useState();
   const [showSearch, setShowSearch] = useState(true)
@@ -46,6 +46,11 @@ export default function App() {
     setShowModal(false);
     setSearchTerm("");
   };
+
+  //Sync local storage with newly added video
+  useEffect(() => {
+    localStorage.setItem("savedData", JSON.stringify(selectedVideos))
+  },[selectedVideos])
   //Select video from queque and play it
   const handlePlayVideo = (video) => {
     setPlayVideo(video.id.videoId);
@@ -57,6 +62,7 @@ export default function App() {
       newList.splice(itemIndex, 1);
       return newList;
     });
+    
   };
   // Create a memoized version of the handleSelect, handlePlayVideo function
   // that only changes when the video argument changes
